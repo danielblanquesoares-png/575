@@ -1,0 +1,53 @@
+# Bloco FPS Online
+Protótipo multiplayer de tiro em primeira pessoa, com cenário em blocos.
+
+## Computador
+Instale Node.js, extraia o ZIP e rode `npm install` e `npm start`. Abra http://localhost:3000.
+
+## Google Colab
+Envie o ZIP ao Colab e rode:
+```python
+!unzip -o bloco_fps_online.zip
+%cd bloco_fps_online
+!npm install
+```
+Em outra célula:
+```python
+import subprocess, time
+servidor = subprocess.Popen(["npm", "start"])
+time.sleep(3)
+```
+Depois:
+```python
+!npm install -g localtunnel
+```
+E:
+```python
+import subprocess
+tunel = subprocess.Popen(["lt", "--port", "3000"])
+```
+!unzip -o bloco_fps_online.zip
+%cd bloco_fps_online
+!npm install
+import subprocess
+import time
+
+servidor = subprocess.Popen(["npm", "start"])
+time.sleep(3)
+!npm install -g localtunnel
+!npm install -g localtunnel
+import subprocess
+
+tunel = subprocess.Popen(["lt", "--port", "3000"])
+
+
+Abra e compartilhe o endereço `loca.lt` que aparecer. O Colab é temporário; o endereço muda quando a sessão reinicia.
+
+## Publicar permanentemente
+Envie os arquivos ao GitHub e crie um Web Service no Render. Build: `npm install`. Start: `npm start`.
+
+## Controles
+WASD mover · mouse mirar · clique esquerdo atirar · R recarregar · Espaço pular.
+
+É um protótipo escolar. Para multiplayer, o servidor precisa permanecer ligado e todos entram pelo mesmo endereço. O cenário, física e sistema de acertos são simplificados.
+
